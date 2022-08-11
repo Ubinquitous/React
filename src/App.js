@@ -1,9 +1,13 @@
 import './App.css';
 import MyComponent from './component/MyComponent';
+import Counter from './component/Counter';
+import Say from './component/Say';
 
 function App() {
   return (
-    <MyComponent favoriteNumber={9} name='Ubin'>Learn React.</MyComponent>
+    <>
+      <Say />
+    </>
   );
 }
 

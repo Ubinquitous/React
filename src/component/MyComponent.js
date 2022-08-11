@@ -6,6 +6,7 @@ class MyComponent extends Component {
         const { name, favoriteNumber, children } = this.props;
         return (
             <div>
+                <br />
                 Hello. my name is {name}. <br />
                 childeren value is "{children}". <br />
                 my favorite number is {favoriteNumber}.
