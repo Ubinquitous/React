@@ -18,7 +18,6 @@ class MyComponent extends Component {
 MyComponent.defaultProps = {
     name: 'Default'
 }
-
 MyComponent.propTypes = {
     name: PropTypes.string,
     favoriteNumber: PropTypes.number.isRequired

@@ -1,14 +1,13 @@
-import './App.css';
-import MyComponent from './component/MyComponent';
-import Counter from './component/Counter';
-import Say from './component/Say';
+import React from 'react';
+import CSSModule from './style/CSSModule';
 
-function App() {
+const App = () => {
   return (
-    <>
-      <Say />
-    </>
+    <div>
+      <CSSModule />
+
+    </div>
   );
-}
+};
 
 export default App;
