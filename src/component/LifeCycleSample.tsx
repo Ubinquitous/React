@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 /*
 App.js
@@ -45,12 +45,12 @@ class LifeCycleSample extends Component {
 
     myRef = null;
 
-    constructor(props) {
+    constructor(props: any) {
         super(props);
         console.log('constructor');
     }
 
-    static getDerivedStateFromProps(nextProps, prevState) {
+    static getDerivedStateFromProps(nextProps: any, prevState: any) {
         console.log('getDerivedStateFromProps');
         if (nextProps.color !== prevState.color) {
             return { color: nextProps.color };
@@ -62,7 +62,7 @@ class LifeCycleSample extends Component {
         console.log('componentDidMount');
     }
 
-    shouldComponentUpdate(nextProps, nextState) {
+    shouldComponentUpdate(nextProps: any, nextState: any) {
         console.log('shouldComponentUpdate', nextProps, nextState);
         return nextState.number % 10 !== 4;
     }
@@ -77,39 +77,39 @@ class LifeCycleSample extends Component {
         });
     }
 
-    getSnapshotBeforeUpdate(prevProps, prevState) {
-        console.log('getSnapshotBeforeUpdate');
-        if (prevProps.color !== this.props.color) {
-            return this.myRef.style.color;
-        }
-        return null;
-    }
+    // getSnapshotBeforeUpdate(prevProps: any, prevState: any) {
+    //     console.log('getSnapshotBeforeUpdate');
+    //     if (prevProps.color !== this.props.color) {
+    //         return this.myRef.style.color;
+    //     }
+    //     return null;
+    // }
 
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        console.log('componentDidUpdate', prevProps, prevState);
-        if (snapshot) {
-            console.log('업데이트 전 색상: ', snapshot);
-        }
-    }
+    // componentDidUpdate(prevProps, prevState, snapshot) {
+    //     console.log('componentDidUpdate', prevProps, prevState);
+    //     if (snapshot) {
+    //         console.log('업데이트 전 색상: ', snapshot);
+    //     }
+    // }
 
-    render() {
-        console.log('render');
+    // render() {
+    //     console.log('render');
 
-        const style = {
-            color: this.props.color
-        };
-        return (
-            <div>
-                <h1 style={style} ref={ref => this.myRef = ref}>
-                    {this.state.number}
-                </h1>
-                <p>color: {this.state.color}</p>
-                <button onClick={this.handleClick}>
-                    add
-                </button>
-            </div>
-        );
-    }
+    //     const style = {
+    //         color: this.props.color
+    //     };
+    //     return (
+    //         <div>
+    //             <h1 style={style} ref={ref => this.myRef = ref}>
+    //                 {this.state.number}
+    //             </h1>
+    //             <p>color: {this.state.color}</p>
+    //             <button onClick={this.handleClick}>
+    //                 add
+    //             </button>
+    //         </div>
+    //     );
+    // }
 }
 
 export default LifeCycleSample;

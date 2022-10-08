@@ -1,7 +1,7 @@
 import React from 'react';
 import { useReducer } from 'react';
 
-function reducer(state, action) {
+function reducer(state: any, action: any) {
     return {
         ...state,
         [action.name]: action.value
@@ -15,7 +15,7 @@ const ReducerInfo = () => {
     });
     const { name, nickname } = state;
 
-    const onChange = (e) => {
+    const onChange = (e: any) => {
         dispatch(e.target);
     }
 

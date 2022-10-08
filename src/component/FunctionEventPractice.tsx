@@ -8,8 +8,8 @@ const FunctionEventPractice = () => {
         message: ''
     });
 
-    const [username, message] = form;
-    const onChange = (e) => {
+    const [username, message]: any = form;
+    const onChange = (e: any) => {
         const nextForm = {
             ...form,
             [e.target.name]: e.target.value
@@ -24,7 +24,7 @@ const FunctionEventPractice = () => {
             message: ''
         });
     };
-    const onKeyPress = (e) => {
+    const onKeyPress = (e: any) => {
         if (e.target.value === 'Enter') {
             onClick();
         }
@@ -43,7 +43,7 @@ const FunctionEventPractice = () => {
             <input
                 type='text'
                 name='message'
-                placeholeder='write some anything.'
+                placeholder='write some anything.'
                 value={message}
                 onChange={onChange}
                 onKeyPress={onKeyPress}

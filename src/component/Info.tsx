@@ -5,13 +5,13 @@ const Info = () => {
 
     const [name, setName] = useState('');
     const [nickname, setNickname] = useState('');
-    const [value, setValue] = useState(0);
+    const [value] = useState(0);
 
-    const onChangeName = (e) => {
+    const onChangeName = (e: any) => {
         setName(e.target.value);
     }
 
-    const onChangeNickname = (e) => {
+    const onChangeNickname = (e: any) => {
         setNickname(e.target.value);
     }
 

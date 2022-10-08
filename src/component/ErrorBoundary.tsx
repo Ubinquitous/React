@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 
 class ErrorBoundary extends Component {
+
     state = {
         error: false
     };
 
-    componentDidCatch(error, info) {
+    componentDidCatch(error: any, info: any) {
         this.setState({
             error: true
         });
@@ -18,7 +19,6 @@ class ErrorBoundary extends Component {
                     404 Not Found
                 </div>
             );
-        return this.props.children;
     }
 }
 

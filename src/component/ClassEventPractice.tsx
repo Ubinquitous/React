@@ -7,7 +7,7 @@ class ClassEventPractice extends Component {
         something: ''
     }
 
-    handleChange = (e) => {
+    handleChange = (e: any) => {
         this.setState({
             [e.target.name]: e.target.value
             /* 
@@ -37,7 +37,7 @@ class ClassEventPractice extends Component {
         });
     }
 
-    handleKeyPress = (e) => {
+    handleKeyPress = (e: any) => {
         if (e.key === 'Enter') {
             this.handleClick();
         }

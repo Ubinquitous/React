@@ -1,24 +1,24 @@
 import React, { useMemo, useCallback, useRef } from 'react';
 import { useState } from 'react';
 
-const getAverage = (numbers) => {
+const getAverage = (numbers: any) => {
     console.log(`계산중...`);
     if (numbers.length === 0) return 0;
-    const sum = numbers.reduce((a, b) => a + b);
+    const sum = numbers.reduce((a: any, b: any) => a + b);
     return sum / numbers.length
 }
 
 const Average = () => {
     const [list, setList] = useState([]);
     const [number, setNumber] = useState('');
-    const inputEl = useRef(null);
+    const inputEl: any = useRef();
 
-    const onChange = useCallback(e => {
+    const onChange = useCallback((e: any) => {
         setNumber(e.target.value);
     }, []); // 컴포넌트가 처음 렌더링될 때만 함수 생성
 
     const onInsert = useCallback(() => {
-        const nextList = list.concat(parseInt(number));
+        const nextList = list.concat(([] as any).parseInt(number));
         setList(nextList);
         setNumber('');
         inputEl.current.focus();

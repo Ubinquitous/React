@@ -13,7 +13,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "sas": "^3.0.4",
     "sass": "^1.54.4",
+    "scss": "^0.2.4",
+    "ts-node": "^10.9.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -39,5 +42,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/jest": "^29.1.2",
+    "@types/node": "^18.8.3",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "typescript": "^4.8.4"
   }
 }
